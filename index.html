@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Expense Tracker -->
+    <div class="expense-container">
+      <h1>Expense Tracker</h1>
+      <div class="expense-summary">
+        <div>
+          <h3>Total Income</h3>
+          <p class="total-income">0</p>
+        </div>
+        <div>
+          <h3>Total Expenses</h3>
+          <p class="total-expenses">0</p>
+        </div>
+        <div>
+          <h3>Balance</h3>
+          <p class="balance">0</p>
+        </div>
+      </div>
+      <form class="expense-form">
+        <input
+          type="text"
+          class="expense-input-desc"
+          placeholder="Description"
+          required
+        />
+        <input
+          type="number"
+          class="expense-input-amount"
+          placeholder="Amount"
+          min="0.01"
+          step="0.01"
+          required
+        />
+        <select class="expense-select-type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <select class="expense-select-category">
+          <option value="Salary">Salary</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Bills">Bills</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Fun">Fun</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="date" class="expense-input-date" required />
+        <button type="submit" class="expense-btn-add">Add Transaction</button>
+      </form>
+      <div class="expense-list-section">
+        <h3>Transaction List</h3>
+        <ul class="expense-list"></ul>
+      </div>
+    </div>
+
+    <!-- Note app -->
+    <div class="notes-container">
+      <h2>My Notes</h2>
+      <form class="notes-form">
+        <input
+          type="text"
+          class="note-title"
+          placeholder="Note Title"
+          required
+        />
+        <textarea
+          class="note-body"
+          placeholder="Write your note..."
+          required
+        ></textarea>
+        <button type="submit" class="save-note-btn">Save Note</button>
+      </form>
+      <input type="text" class="search-note" placeholder="Search notes..." />
+      <div class="notes-list"></div>
+    </div>
+
+    <!-- Quiz Builder -->
+    <div class="quiz-builder">
+      <h2>Quiz Builder</h2>
+      <form class="quiz-form">
+        <input
+          type="text"
+          class="question-input"
+          placeholder="Enter question"
+          required
+        />
+        <input
+          type="text"
+          class="option-input"
+          placeholder="Option 1"
+          required
+        />
+        <input
+          type="text"
+          class="option-input"
+          placeholder="Option 2"
+          required
+        />
+        <input
+          type="text"
+          class="option-input"
+          placeholder="Option 3"
+          required
+        />
+        <input
+          type="text"
+          class="option-input"
+          placeholder="Option 4"
+          required
+        />
+        <select class="correct-answer">
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3">Option 4</option>
+        </select>
+        <button type="submit">Add Question</button>
+      </form>
+      <ul class="question-list"></ul>
+      <button class="start-btn" disabled>Start Quiz</button>
+    </div>
+    <div class="play-screen" hidden>
+      <h2 class="quiz-question"></h2>
+      <div class="quiz-options"></div>
+      <p class="quiz-progress"></p>
+    </div>
+    <div class="result-screen" hidden>
+      <h2 class="final-score"></h2>
+      <button class="back-btn">Back to Build Mode</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
